@@ -79,16 +79,10 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
-#production:
-#  <<: *default
-#  host: ENV['PGHOST']
-#  username: ENV['PGUSER']
-#  password: ENV['PGPASSWORD']
-#  port: ENV['PGPORT']
-#  database: railway
-
 production:
   <<: *default
-  database: trading_app_production
-  username: trading_app
-  password: <%= ENV['trading_app_DATABASE_PASSWORD'] %>
+  host: ENV['PGHOST']
+  username: ENV['PGUSER']
+  password: ENV['PGPASSWORD']
+  port: ENV['PGPORT']
+  database: railway
